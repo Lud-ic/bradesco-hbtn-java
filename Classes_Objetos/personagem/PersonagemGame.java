@@ -1,4 +1,4 @@
-package Classes_Objetos.personagem;
+package personagem;
 
 public class PersonagemGame {
     public int saudeAtual;
