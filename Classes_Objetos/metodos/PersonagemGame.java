@@ -21,22 +21,16 @@ public class PersonagemGame {
     }
 
     public void tomarDano(int quantidadeDeDano){
-        int quatidadeDeSaude;
-        quatidadeDeSaude=getSaudeAtual()-quantidadeDeDano;
-        if(quatidadeDeSaude<0){
+        setSaudeAtual(getSaudeAtual()-quantidadeDeDano);
+        if(getSaudeAtual()<0){
             setSaudeAtual(0);
-        }else {
-            setSaudeAtual(quatidadeDeSaude);
         }
     }
 
     public void receberCura(int quantidadeDeCura){
-        int quatidadeDeSaude;
-        quatidadeDeSaude = getSaudeAtual()+quantidadeDeCura;
-        if(quatidadeDeSaude >= 100) {
+       setSaudeAtual(getSaudeAtual()+quantidadeDeCura);
+        if(getSaudeAtual()>= 100) {
             setSaudeAtual(100);
-        }else {
-            setSaudeAtual(quatidadeDeSaude);
         }
     }
 }
