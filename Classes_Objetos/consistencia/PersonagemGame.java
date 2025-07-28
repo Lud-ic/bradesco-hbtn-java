@@ -1,4 +1,4 @@
-
+package consistencia;
 
 public class PersonagemGame {
     private int saudeAtual;
