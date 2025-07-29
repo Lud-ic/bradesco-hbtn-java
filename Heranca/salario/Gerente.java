@@ -1,4 +1,4 @@
-
+package salario;
 
 public class Gerente extends Empregado{
 

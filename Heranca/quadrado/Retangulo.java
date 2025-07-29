@@ -1,4 +1,4 @@
-
+package quadrado;
 
 public class Retangulo extends FormaGeometrica {
     protected double largura;
