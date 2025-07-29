@@ -28,11 +28,9 @@ public class Pedido {
     public double calcularTotal(){
         double precoTotal = 0;
         for(ItemPedido item : itens){
-            precoTotal =+ (double)item.getQuantidade()*item.getProduto().obterPrecoLiquido();
-
+            precoTotal += (double)item.getQuantidade()*item.getProduto().obterPrecoLiquido();
         }
-        return precoTotal;
+        double descontoTotal = precoTotal * (percentualDesconto/100);
+        return precoTotal - descontoTotal;
     }
-
-
 }
