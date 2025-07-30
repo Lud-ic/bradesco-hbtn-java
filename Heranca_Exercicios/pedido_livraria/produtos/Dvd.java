@@ -1,4 +1,4 @@
-package produtos;
+package pedido_livraria.produtos;
 
 public class Dvd extends Produto {
     private String diretor;

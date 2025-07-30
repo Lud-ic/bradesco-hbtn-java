@@ -1,4 +1,4 @@
-package produtos;
+package pedido_livraria.produtos;
 
 public class Livro extends Produto{
     private int paginas;
