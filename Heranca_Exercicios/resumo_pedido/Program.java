@@ -1,5 +1,8 @@
 
 
+import produtos.Dvd;
+import produtos.Livro;
+
 import java.util.Locale;
 
 public class Program {
@@ -55,5 +58,6 @@ public class Program {
         Pedido pedido4 = new Pedido(5, itensPedido4);
 
         pedido4.apresentarResumoPedido();
+
     }
 }
