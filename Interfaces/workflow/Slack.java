@@ -1,4 +1,4 @@
-
+package workflow;
 
 public class Slack implements CanalNotificacao {
     @Override
