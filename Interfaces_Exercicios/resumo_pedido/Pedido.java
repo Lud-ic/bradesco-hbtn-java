@@ -1,6 +1,6 @@
+package resumo_pedido;
 
-
-import provedores.Frete;
+import resumo_pedido.provedores.Frete;
 
 public class Pedido {
     private int codigo;
