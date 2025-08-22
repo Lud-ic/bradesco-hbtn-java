@@ -10,7 +10,7 @@ public class FileReadingExercise {
 
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName))) {
             String line;
-            System.out.println("Conteúdo do arquivo '" + fileName + "':");
+            System.out.println("Conteúdo do arquivo '" + fileName + "':\n");
             while ((line = bufferedReader.readLine()) != null) {
                 System.out.println(line);
             }
