@@ -1,6 +1,6 @@
-package contas_especiais;
 
-import contas_especiais.exceptions.OperacaoInvalidaException;
+
+import exceptions.OperacaoInvalidaException;
 
 public class ContaBancariaBasica {
     private String numeracao;
@@ -23,6 +23,10 @@ public class ContaBancariaBasica {
 
     public double getTaxaJurosAnual() {
         return taxaJurosAnual;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
     }
 
     public void depositar(double valor) throws OperacaoInvalidaException {

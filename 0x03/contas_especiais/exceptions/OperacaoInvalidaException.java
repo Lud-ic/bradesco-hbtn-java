@@ -1,4 +1,4 @@
-package contas_especiais.exceptions;
+package exceptions;
 
 public class OperacaoInvalidaException extends Exception {
     public OperacaoInvalidaException(String message) {

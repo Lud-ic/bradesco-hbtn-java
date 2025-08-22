@@ -1,4 +1,4 @@
-package contas_especiais;
+
 
 public class ContaBancariaControlada extends ContaBancariaBasica{
     private double saldoMinimo;
@@ -12,6 +12,9 @@ public class ContaBancariaControlada extends ContaBancariaBasica{
 
     @Override
     public void aplicarAtualizacaoMensal() {
-
+        super.aplicarAtualizacaoMensal();
+        if (getSaldo() < saldoMinimo ) {
+            setSaldo(getSaldo() - valorPenalidade);
+        }
     }
 }

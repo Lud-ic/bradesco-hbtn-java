@@ -1,6 +1,6 @@
-package contas_especiais;
 
-import contas_especiais.exceptions.OperacaoInvalidaException;
+
+import exceptions.OperacaoInvalidaException;
 
 public class ContaBancariaTarifada extends ContaBancariaBasica{
     private int quantidadeTransacoes;
@@ -17,10 +17,12 @@ public class ContaBancariaTarifada extends ContaBancariaBasica{
     @Override
     public void sacar(double valor) throws OperacaoInvalidaException {
         super.sacar(valor);
+        setSaldo(getSaldo() - 0.10);
     }
 
     @Override
     public void depositar(double valor) throws OperacaoInvalidaException {
         super.depositar(valor);
+        setSaldo(getSaldo() - 0.10);
     }
 }
