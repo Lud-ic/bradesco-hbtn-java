@@ -44,24 +44,28 @@ public class ContaBancariaBasica {
 
     public double calcularTarifaMensal(){
         double valorFixo = 10.0;
-        double valorVariavel = 0.1* saldo;
+        double valorVariavel = 0.1 * saldo;
 
          if(valorFixo < valorVariavel){
              return valorFixo;
          } else {
              return valorVariavel;
          }
-
     }
 
     public double calcularJurosMensal(){
+        double jurosMensal = taxaJurosAnual/12/100;
         if (saldo <= 0) {
-            return 0;
+            jurosMensal = 0;
+        } else {
+            jurosMensal *= saldo;
         }
-        return saldo * (taxaJurosAnual / 100) / 12;
+        return jurosMensal;
     }
 
     public void aplicarAtualizacaoMensal() {
-        saldo -= calcularTarifaMensal() + calcularJurosMensal();
+        double tarifaMensal = calcularTarifaMensal();
+        double jurosMensal = calcularJurosMensal();
+        saldo += jurosMensal - tarifaMensal;
     }
 }
