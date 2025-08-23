@@ -1,4 +1,6 @@
-package tres;
+
+
+import java.util.Scanner;
 
 public class GerenciadorEstoque {
     public static void main(String[] args) {
