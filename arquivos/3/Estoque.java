@@ -43,8 +43,17 @@ public class Estoque {
         }
     }
 
+    private int gerarNovoId() {
+        int maxId = 0;
+        for (Produto produto : produtos) {
+            if (produto.getId() > maxId)
+                maxId = produto.getId();
+        }
+        return maxId + 1;
+    }
+
     public void adicionarProduto(String nome, int quantidade, double preco) {
-        int novoId = produtos.size() + 1;
+        int novoId = gerarNovoId();
         Produto novoProduto = new Produto(novoId, nome, quantidade, preco);
         produtos.add(novoProduto);
         salvarProdutos();
@@ -66,7 +75,6 @@ public class Estoque {
     }
 
     public void atualizarQuantidade(int idAtualizar, int novaQuantidade) {
-        carregarProdutos();
         boolean encontrado = false;
         for (Produto produto : produtos) {
             if (produto.getId() == idAtualizar) {
