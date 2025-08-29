@@ -30,8 +30,5 @@ public class PessoasArray {
                 System.out.println("Passando pelo indice:" + i);
             }
         }
-        if (!encontrado) {
-            throw new IllegalArgumentException("O nome " + nome + " não se encontra no array de nomes");
-        }
     }
 }
