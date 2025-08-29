@@ -1,4 +1,4 @@
-package dois;
+
 public class Program {
     public static void main(String[] args) {
         long inicio  = System.nanoTime();
