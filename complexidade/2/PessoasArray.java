@@ -30,7 +30,7 @@ public class PessoasArray {
             if (nomes[meio].equals(nome)) {
                 System.out.println("Nome " + nome + " encontrado na posição " + meio);
                 encontrado = true;
-                break;
+                
             } else if (nomes[meio].compareTo(nome) < 0) {
                 System.out.println("Passando pelo indice: " + meio);
                 inicio = meio + 1;
