@@ -1,4 +1,3 @@
-
 public class PessoasArray {
     private String[] nomes;
 
