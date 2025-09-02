@@ -1,4 +1,4 @@
-package midias;
+
 
 public class Jornal extends Midia{
     private int quantidadeArtigos;

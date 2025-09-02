@@ -1,4 +1,4 @@
-package midias;
+
 
 public class Video extends Midia{
     private int duracao;
