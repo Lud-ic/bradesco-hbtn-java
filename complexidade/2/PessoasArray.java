@@ -27,12 +27,12 @@ public class PessoasArray {
         System.out.println("Procurando o nome: \"" + nome + "\"");
         while (inicio <= fim) {
             int meio = (inicio + fim)/2;
+            System.out.println("Passando pelo indice: " + meio);
             if (nomes[meio].equals(nome)) {
                 System.out.println("Nome " + nome + " encontrado na posição " + meio);
                 encontrado = true;
                 break;
             } else if (nomes[meio].compareTo(nome) < 0) {
-                System.out.println("Passando pelo indice: " + meio);
                 inicio = meio + 1;
             } else {
                 fim = meio - 1;
