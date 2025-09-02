@@ -8,8 +8,8 @@ public class Livro extends Midia{
         this.edicao = edicao;
     }
 
-    @Override
-    public String toString() {
-        return "Tipo: Livro - Nome: " + getNome();
-    }
+//    @Override
+//    public String toString() {
+//        return "Tipo: Livro - Nome: " + getNome();
+//    }
 }

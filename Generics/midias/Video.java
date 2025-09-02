@@ -12,8 +12,8 @@ public class Video extends Midia{
         return duracao;
     }
 
-    @Override
-    public String toString() {
-        return "Tipo: Video - Nome: " + getNome();
-    }
+//    @Override
+//    public String toString() {
+//        return "Tipo: Video - Nome: " + getNome();
+//    }
 }

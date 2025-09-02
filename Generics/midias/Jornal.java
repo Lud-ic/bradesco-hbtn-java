@@ -8,8 +8,8 @@ public class Jornal extends Midia{
         this.quantidadeArtigos = quantidadeArtigos;
     }
 
-    @Override
-    public String toString() {
-        return "Jornal - Nome: " + getNome();
-    }
+//    @Override
+//    public String toString() {
+//        return "Jornal - Nome: " + getNome();
+//    }
 }
