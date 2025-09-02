@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Biblioteca <T extends  Midia>{
-    private List<T> midias = new ArrayList<>();
+    private List<T> midias;
 
     public Biblioteca() {
         this.midias = new ArrayList<>();
