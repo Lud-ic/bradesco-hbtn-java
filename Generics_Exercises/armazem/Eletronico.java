@@ -1,4 +1,4 @@
-
+package armazem;
 
 public class Eletronico {
     String descricao;
