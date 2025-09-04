@@ -1,40 +1,42 @@
-package numeros;
+
 
 import java.util.List;
 
 public class ManipularArrayNumeros {
     
-    public static void buscarPosicaoNumero(){
-        int[] numeros = {10, 20, 30, 40, 50};
-        int numeroProcurado = 30;
-        int posicao = -1;
-
-        for (int i = 0; i < numeros.length; i++) {
-            if (numeros[i] == numeroProcurado) {
-                posicao = i;
-                break;
+    public static Integer buscarPosicaoNumero(List<Integer>numeros, int numeroProcurado) {
+        for (int i = 0; i < numeros.size(); i++) {
+            if (numeros.get(i) == numeroProcurado) {
+                return numeros.indexOf(numeroProcurado);
+            } else {
+                return -1;
             }
         }
-
-        if (posicao != -1) {
-            System.out.println("Número " + numeroProcurado + " encontrado na posição: " + posicao);
-        } else {
-            System.out.println("Número " + numeroProcurado + " não encontrado no array.");
-        }
+        return 0;
     }
 
     public static void adicionarNumero(List<Integer> numeros, int i) {
-        numeros.add(i);
+        if(numeros.contains(i)){
+            throw new IllegalArgumentException("Numero jah contido na lista");
+        } else {
+            numeros.add(i);
+        }
     }
 
     public static void removerNumero(List<Integer> numeros, int i) {
-        numeros.remove(Integer.valueOf(i));
+        if (!numeros.contains(i)) {
+            throw new IllegalArgumentException("Numero nao encontrado na lista");
+        } else {
+            numeros.remove(Integer.valueOf(i));
+        }
     }
 
-    public static void substituirNumero(List<Integer> numeros, int i, int i1) {
-        int index = numeros.indexOf(i);
-        if (index != -1) {
-            numeros.set(index, i1);
+    public static void substituirNumero(List<Integer> numeros, int numeroSubstituir, int numeroSubstituto) {
+        int index = numeros.indexOf(numeroSubstituir);
+        if (numeros.contains(numeroSubstituir)) {
+            numeros.set(index, numeroSubstituto);
+        } else {
+            adicionarNumero(numeros, numeroSubstituto);
         }
     }
   
