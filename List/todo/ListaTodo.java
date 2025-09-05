@@ -31,12 +31,12 @@ public class ListaTodo {
 
 
     public void listarTarefas() {
-        for(Tarefa tarefa : tarefas){
-            if(!tarefa.modificarDescricao()) {
-                String status = tarefa.isEstahFeita() ? "[X]" : "[ ]";
-                System.out.println(status + " Id: " + tarefa.getIdentificador() + " - Descricao: " + tarefa.getDescricao());
-            }
+        for (Tarefa tarefa : tarefas) {
             tarefa.modificarDescricao();
+        }
+        for (Tarefa tarefa : tarefas) {
+            String status = tarefa.isEstahFeita() ? "[X]" : "[ ]";
+            System.out.println(status + "  Id: " + tarefa.getIdentificador() + " - Descricao: " + tarefa.getDescricao());
         }
     }
 
