@@ -1,4 +1,4 @@
-package postagem_blog;
+
 
 import java.util.*;
 
@@ -19,15 +19,15 @@ public class Blog {
     }
 
     public Set<Autor> obterTodosAutores() {
-        Set<Autor> autores = new HashSet<Autor>();
+        Set<Autor> autores = new TreeSet<>();
         for (Post post : posts) {
-            autores.add(new Autor(post.autor.getNome(), post.autor.getSobrenome()));
+            autores.add(post.getAutor());
         }
         return autores;
     }
 
     public Map<Categorias, Integer> obterContagemPorCategoria() {
-        Map<Categorias, Integer> contagem = new HashMap<>();
+        Map<Categorias, Integer> contagem = new TreeMap<>();
         for (Post post : posts) {
             Categorias categoria = Categorias.valueOf(post.getCategoria().name());
             contagem.put(categoria, contagem.getOrDefault(categoria, 0) + 1);
@@ -56,7 +56,7 @@ public class Blog {
     }
 
     public Map<Categorias, Set<Post>> obterTodosPostsPorCategorias() {
-        Map<Categorias, Set<Post>> postsPorCategoria = new HashMap<>();
+        Map<Categorias, Set<Post>> postsPorCategoria = new TreeMap<>();
         for (Post post : posts) {
             Categorias categoria = post.getCategoria();
             if (!postsPorCategoria.containsKey(categoria)) {
@@ -68,7 +68,7 @@ public class Blog {
     }
 
     public Map<Autor, Set<Post>> obterTodosPostsPorAutor() {
-        Map<Autor, Set<Post>> postsPorAutor = new HashMap<>();
+        Map<Autor, Set<Post>> postsPorAutor = new TreeMap<>();
         for (Post post : posts) {
             Autor autor = post.getAutor();
             if (!postsPorAutor.containsKey(autor)) {
