@@ -1,0 +1,9 @@
+package consulta_produtos;
+
+import java.util.List;
+
+public class ConsultaProdutos {
+    static List<Produto> filtrar(List<Produto> produtos, CriterioFiltro criterio) {
+        return produtos.stream().filter(criterio::testar).toList();
+    }
+}
