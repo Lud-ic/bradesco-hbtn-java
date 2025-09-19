@@ -1,4 +1,4 @@
-
+package liquido;
 
 public class Funcionario {
     private double salario;
