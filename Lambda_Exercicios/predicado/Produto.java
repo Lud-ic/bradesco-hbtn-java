@@ -1,4 +1,4 @@
-
+package predicado;
 
 public class Produto {
     String nome;

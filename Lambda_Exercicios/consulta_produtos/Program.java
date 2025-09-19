@@ -1,4 +1,4 @@
-
+package consulta_produtos;
 
 import java.util.Arrays;
 import java.util.List;
