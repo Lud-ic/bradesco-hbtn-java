@@ -1,4 +1,4 @@
-package idade_por_cargo;
+
 
 import java.util.List;
 import java.util.Map;
@@ -16,5 +16,13 @@ public class ConsultaPessoas {
                         Collectors.mapping(Pessoa::getIdade, Collectors.toList())
                 )
         );
+    }
+
+    static Map<String, List<Pessoa>> obterPessoasPorCargoAcimaDe40anos(List<Pessoa> pessoas) {
+        return pessoas.stream()
+                .collect(Collectors.groupingBy(
+                        Pessoa::getCargo,
+                        Collectors.filtering(p -> p.getIdade() > 40, Collectors.toList())
+                ));
     }
 }
