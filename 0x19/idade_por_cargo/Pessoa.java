@@ -1,4 +1,4 @@
-package pessoa_por_cargo;
+
 
 import java.util.Locale;
 
@@ -62,5 +62,4 @@ public class Pessoa {
         Locale.setDefault(new Locale("pt", "BR"));
         return String.format("[%d] %s %s %d R$ %.6f", codigo, nome, cargo, idade, salario);
     }
-
 }
